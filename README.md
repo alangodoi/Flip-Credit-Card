@@ -1,3 +1,3 @@
 # Flip-Credit-Card
 
-![](https://gfycat.com/optimisticfaithfulgermanwirehairedpointer)
+![](https://gfycat.com/optimisticfaithfulgermanwirehairedpointer.gif)
