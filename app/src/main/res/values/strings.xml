@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FlipCreditCard</string>
+
+    <string name="card_number">Card Number</string>
+    <string name="card_name">Name</string>
+    <string name="card_validthru">Valid Thru</string>
+    <string name="card_cvv">CVV</string>
+    <string name="card_save">Save</string>
+
+</resources>

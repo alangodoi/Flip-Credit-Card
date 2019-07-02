@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#145374</color>
+    <color name="colorPrimaryDark">#00334e</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="creditCardColor">#145374</color>
+    <color name="creditCardBorderColor">#00334e</color>
+    <color name="creditCardTextColor">#e8e8e8</color>
+</resources>

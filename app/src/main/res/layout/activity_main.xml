@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_settings"
+        android:tint="@color/creditCardBorderColor"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clCardFront"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/credit_card_bg"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardValidThru"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="27sp"
+            app:layout_constraintWidth_percent="0.20"/>
+
+        <TextView
+            android:id="@+id/tvCardNumber2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardValidThru"
+            app:layout_constraintLeft_toRightOf="@+id/tvCardNumber"
+            android:layout_marginStart="3dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="27sp"
+            app:layout_constraintWidth_percent="0.20"/>
+
+        <TextView
+            android:id="@+id/tvCardNumber3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardValidThru"
+            app:layout_constraintLeft_toRightOf="@+id/tvCardNumber2"
+            android:layout_marginStart="3dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="27sp"
+            app:layout_constraintWidth_percent="0.20" />
+
+        <TextView
+            android:id="@+id/tvCardNumber4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardValidThru"
+            app:layout_constraintLeft_toRightOf="@id/tvCardNumber3"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="27sp"
+            app:layout_constraintWidth_percent="0.20" />
+
+        <TextView
+            android:id="@+id/tvCardValidThru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/cardFlag"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="125dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvCardName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="20sp"
+            android:textAllCaps="true"/>
+
+        <ImageView
+            android:id="@+id/cardFlag"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="invisible"
+            app:layout_constraintWidth_percent="0.2"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clCardBack"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/credit_card_bg"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvBankAcc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardAcc"
+            app:layout_constraintWidth_percent="0.6"
+            android:layout_marginStart="16dp"
+            android:text="Account"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintLeft_toRightOf="@+id/tvBankAcc"
+            app:layout_constraintBottom_toTopOf="@id/tvCardCvv"
+            android:text="@string/card_cvv"/>
+
+        <TextView
+            android:id="@+id/tvCardAcc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.6"
+            android:textColor="@color/creditCardTextColor"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"
+            android:text="0001 102346546"/>
+
+        <TextView
+            android:id="@+id/tvCardCvv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvCardAcc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/creditCardTextColor"
+            android:textSize="20sp"
+            android:textAllCaps="true"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clCardFront"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:inputType="number"
+            android:hint="@string/card_number"
+            android:maxLength="16"/>
+
+        <EditText
+            android:id="@+id/etCardName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber"
+            android:inputType="textCapWords"
+            android:hint="@string/card_name"/>
+
+        <EditText
+            android:id="@+id/etCardValidThru"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/etCardName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:inputType="date"
+            android:hint="@string/card_validthru"
+            app:layout_constraintWidth_percent="0.4"
+            android:maxLength="5"/>
+
+        <EditText
+            android:id="@+id/etCardCvv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/etCardName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="number"
+            android:hint="@string/card_cvv"
+            app:layout_constraintWidth_percent="0.4"
+            android:maxLength="3"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnSaveCard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/credit_card_bg"
+        android:textColor="@color/creditCardTextColor"
+        android:text="@string/card_save"/>
+
+</android.support.constraint.ConstraintLayout>
